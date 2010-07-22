@@ -1,0 +1,35 @@
+Ubuntu 10's launching
+Hello, I always met these issues on Ubuntu 10.4.
+Sometimes when launching, there would always a screen saying that it is checking drive for error. And indeed, this process takes a long time.
+And what is more curious is that: during the process of checking drive, I saw no hard disk lamp flash. So, this indicate that in fact Ubuntu is not checking
+ hard disk. Am I right?
+ How could I disable the check when booting. It would take a long time.
+ And, if I update the /etc/fstab, to add a auto-mount point for a USB disk. And while booting, the USB disk is not present, or not pluged into PC, the boot
+ process would hang and wait for my response. Could the boot become somehow more clever, and ignore the UBS, and continue to boot, without my attendance?
+
+[code]
+typedef char* pStr;
+int main(void)
+{
+	char string[4]="abc";
+	const pStr p2 = string;
+	p2++;
+	return 0;
+}
+[/code]
+I would like it to be expanded to be following:
+[code]
+typedef char* pStr;
+int main(void)
+{
+	char string[4]="abc";
+	const char* p2 = string;
+	p2++;
+	return 0;
+}
+[/code]
+But I found that following compilation option could not help me.
+[code]
+g++ -c -E -P const.cpp
+[/code]
+Could someone provide me with an appropriate option to realize my goal?
