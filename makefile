@@ -1,6 +1,3 @@
-run : array.o
-	g++ -o run array.o
-array.o : array.cpp
-	g++ -c array.cpp
-clean :
-	rm run array.o
+OBJECTS = array.exe
+include ../../GNU_makefile_template
+LOCFLAGS = -I../array
