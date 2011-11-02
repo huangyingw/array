@@ -61,5 +61,6 @@ int main(void)
   print_array(a,sizeof(a)/sizeof(int));
   array_uncopy(a,sizeof(a)/sizeof(int));
   print_array(a,sizeof(a)/sizeof(int));
+  //int b[]=new int []{1,2,3};
   return 0;
 }
