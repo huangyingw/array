@@ -51,6 +51,8 @@ int main(void)
   printf( "%d   :   %d\n ",&a1,sizeof(&a1));//&a1[0][0]	-1075833576   :   4
   printf( "%d   :   %d\n ",&a1[0],sizeof(&a1[0]));//&a1[0][0]	-1075833576   :   4
 
+  a1[0]={1,2,3};
+
   int a[] = {4, 2, 5};
 
   print_array(a,sizeof(a)/sizeof(int));
