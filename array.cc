@@ -41,10 +41,10 @@ void print_array2(int array[][4], int len1,int len2)
 {
   for (int i=0;i<len1;i++)
   {
-	  for (int j=0;j<len2;j++)
-	  {
-		  cout<<array[i][j]<<",";
-	  }
+    for (int j=0;j<len2;j++)
+    {
+      cout<<array[i][j]<<",";
+    }
   }
   cout<<endl;
 }
