@@ -5,8 +5,8 @@ using namespace std;
 void array_copy(int array[], int len) 
 {
   //int result[]=new int[len];
-  //int *result=new int[len];
-  int result[len];
+  int *result=new int[len];
+  //int result[len];
   for (int i=0;i<len;i++)
   {
     result[i]=array[i];
@@ -34,6 +34,19 @@ void print_array(int array[], int len)
   cout<<endl;
 }
 
+void print_array2(int array[][4], int len1,int len2)
+{
+  for (int i=0;i<len1;i++)
+  {
+    for (int j=0;j<len2;j++)
+    {
+      cout<<array[i][j]<<",";
+    }
+  }
+  cout<<endl;
+}
+
+
 int main(void)
 {
   int	a1[2][3]={6,5,4,3,2,1};
@@ -51,6 +64,8 @@ int main(void)
   printf( "%d   :   %d\n ",&a1,sizeof(&a1));//&a1[0][0]	-1075833576   :   4
   printf( "%d   :   %d\n ",&a1[0],sizeof(&a1[0]));//&a1[0][0]	-1075833576   :   4
 
+  //a1[0]={1,2,3};
+
   int a[] = {4, 2, 5};
 
   print_array(a,sizeof(a)/sizeof(int));
@@ -61,8 +76,16 @@ int main(void)
   print_array(a,sizeof(a)/sizeof(int));
   array_uncopy(a,sizeof(a)/sizeof(int));
   print_array(a,sizeof(a)/sizeof(int));
-  //
-  //int b[]=new int []{1,2,3};
-  //array_uncopy((new int[]{1,2,3}),3);
+
+  int a2[3][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+  print_array2(a2,sizeof(a2)/sizeof(a2[0]),sizeof(a2[0])/sizeof(a2[0][0]));
+  int a3[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
+  int a4[3][4]={{1},{5},{9}};
+  int a5[3][4]={{1},{0,6},{0,0,11}};
+  int a6[3][4]={{1},{0,6},{0,0,11}};
+  int a7[3][4]={{1},{5,6}};
+  int a8[3][4]={{1},{},{9}};
+  int a9[][4]={1,2,3,4,5,6,7,8,9,10,11,12};
+  int a10[][4]={{0,0,3},{},{0,10}};
   return 0;
 }
