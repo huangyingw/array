@@ -2,13 +2,11 @@
 #include <iostream>
 using namespace std;
 
-void array_copy(int array[], int len) 
-{
+void array_copy(int array[], int len) {
   //int result[]=new int[len];
   int *result=new int[len];
   //int result[len];
-  for (int i=0;i<len;i++)
-  {
+  for (int i=0;i<len;i++) {
     result[i]=array[i];
   }
   int temp;
@@ -17,29 +15,23 @@ void array_copy(int array[], int len)
   result[1]=temp;
 }
 
-void array_uncopy(int array[], int len) 
-{
+void array_uncopy(int array[], int len) {
   int temp;
   temp=array[0];
   array[0]=array[1];
   array[1]=temp;
 }
 
-void print_array(int array[], int len)
-{
-  for (int i=0;i<len;i++)
-  {
+void print_array(int array[], int len) {
+  for (int i=0;i<len;i++) {
     cout<<array[i]<<",";
   }
   cout<<endl;
 }
 
-void print_array2(int array[][4], int len1,int len2)
-{
-  for (int i=0;i<len1;i++)
-  {
-    for (int j=0;j<len2;j++)
-    {
+void print_array2(int array[][4], int len1,int len2) {
+  for (int i=0;i<len1;i++) {
+    for (int j=0;j<len2;j++) {
       cout<<array[i][j]<<",";
     }
   }
@@ -47,8 +39,7 @@ void print_array2(int array[][4], int len1,int len2)
 }
 
 
-int main(void)
-{
+int main(void) {
   int	a1[2][3]={6,5,4,3,2,1};
   printf( "%d   :   %d\n ",a1,sizeof(a1));//a1	-1075833576   :   24
   printf( "%d   :   %d\n ",*a1,sizeof(*a1));//*a1	-1075833576   :   12
